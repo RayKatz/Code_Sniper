@@ -7,6 +7,7 @@ public class ShotController : MonoBehaviour {
     public GameObject mouseCollider;
     public float shotSpeed = 100f;
     LayerMask hitLayer;
+    //public float distance;   //TODO: we have to bring the spawned close enough to look like it's shot from the player, but far enough to not hit himself
 
 	// Use this for initialization
 	void Start ()
