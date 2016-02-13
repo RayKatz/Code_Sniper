@@ -20,7 +20,9 @@ public class ShotController : MonoBehaviour {
         RaycastHit hit;
         if (Physics.Raycast(ray,out hit,100,hitLayer))
         {
-            Debug.DrawLine(transform.position, hit.point);
+            Vector3 target = hit.point;
+            target.y = 0.1f;
+            Debug.DrawLine(transform.position, target);
         }
 	}
 }
