@@ -7,7 +7,7 @@ public class ShotController : MonoBehaviour {
     public GameObject mouseCollider;
     public float shotSpeed = 100f;
     LayerMask hitLayer;
-    //public float distance;   //TODO: we have to bring the spawned close enough to look like it's shot from the player, but far enough to not hit himself
+    public float distance = 1f;   //TODO: we have to bring the spawned close enough to look like it's shot from the player, but far enough to not hit himself
 
 	// Use this for initialization
 	void Start ()
@@ -29,7 +29,7 @@ public class ShotController : MonoBehaviour {
             if (Input.GetMouseButtonUp(0))
             {
                 Vector3 dir = Vector3.Normalize(target - transform.position);
-                Vector3 origin = transform.position + dir;
+                Vector3 origin = transform.position + (dir*distance);
                 GameObject bullet = (GameObject) Instantiate(bulletPrefab, origin, Quaternion.identity);
                 bullet.GetComponent<Rigidbody>().AddForce(dir * shotSpeed);
             }

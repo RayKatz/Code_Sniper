@@ -12,6 +12,7 @@ GameObject:
   - 65: {fileID: 6500912}
   - 23: {fileID: 2320212}
   - 114: {fileID: 11463638}
+  - 114: {fileID: 11468232}
   m_Layer: 0
   m_Name: Player_Red
   m_TagString: Untagged
@@ -88,6 +89,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+--- !u!114 &11468232
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fce50d6865e3c840ad8126a501a3ecd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 164166, guid: 86147c99f084c7741ace972e5d8a3616, type: 2}
+  mouseCollider: {fileID: 0}
+  shotSpeed: 100
+  distance: 0.3
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
