@@ -5,8 +5,6 @@ public class PlayerBehaviour : MonoBehaviour {
 
     public int health = 10;
 
-    // Use this for initialization
-
     public void LoseHealth(int damage)
     {
         health -= damage;
