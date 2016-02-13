@@ -19,5 +19,10 @@ public class BulletBehaviour : MonoBehaviour {
     void OnCollisionEnter(Collision c)
     {
         ++bounceCounter;
+        if(c.gameObject.GetComponent<PlayerBehaviour>())
+        {
+            c.gameObject.GetComponent<PlayerBehaviour>().LoseHealth(bounceCounter);
+            Destroy(gameObject);
+        }
     }
 }
