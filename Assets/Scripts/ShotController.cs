@@ -5,6 +5,7 @@ public class ShotController : MonoBehaviour {
 
     public GameObject bulletPrefab;
     public GameObject mouseCollider;
+    public float shotSpeed = 100f;
     LayerMask hitLayer;
 
 	// Use this for initialization
@@ -23,6 +24,16 @@ public class ShotController : MonoBehaviour {
             Vector3 target = hit.point;
             target.y = 0.1f;
             Debug.DrawLine(transform.position, target);
+
+            if (Input.GetMouseButtonUp(0))
+            {
+                Vector3 dir = Vector3.Normalize(target - transform.position);
+                Vector3 origin = transform.position + dir;
+                GameObject bullet = (GameObject) Instantiate(bulletPrefab, origin, Quaternion.identity);
+                bullet.GetComponent<Rigidbody>().AddForce(dir * shotSpeed);
+            }
         }
+
+        
 	}
 }

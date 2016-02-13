@@ -175,8 +175,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fce50d6865e3c840ad8126a501a3ecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 164166, guid: 86147c99f084c7741ace972e5d8a3616, type: 2}
   mouseCollider: {fileID: 1345768345}
+  shotSpeed: 100
 --- !u!1 &710462619
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,7 +395,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 894571934}
   m_LocalRotation: {x: 0.40821794, y: -0.23456973, z: 0.109381676, w: 0.87542605}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 9.33, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -441,7 +442,7 @@ GameObject:
   - 33: {fileID: 1345768348}
   - 64: {fileID: 1345768347}
   - 23: {fileID: 1345768346}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -707,13 +708,14 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2037006209}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9fce50d6865e3c840ad8126a501a3ecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 0}
   mouseCollider: {fileID: 1345768345}
+  shotSpeed: 10
 --- !u!1001 &2067656595
 Prefab:
   m_ObjectHideFlags: 0
