@@ -7,12 +7,14 @@ public class ShotController : MonoBehaviour {
     public GameObject mouseCollider;
     public float shotSpeed = 100f;
     LayerMask hitLayer;
+    LayerMask boundLayer;
     public float distance = 1f;   //TODO: we have to bring the spawned close enough to look like it's shot from the player, but far enough to not hit himself
 
 	// Use this for initialization
 	void Start ()
     {
         hitLayer = 1 << mouseCollider.layer;
+        boundLayer = 1 << 9;
 	}
 	
 	// Update is called once per frame
@@ -24,7 +26,14 @@ public class ShotController : MonoBehaviour {
         {
             Vector3 target = hit.point;
             target.y = 0.1f;
-            Debug.DrawLine(transform.position, target);
+
+            Ray targetRay = new Ray();
+            targetRay.origin = transform.position;
+            targetRay.direction = Vector3.Normalize(target - transform.position);
+
+            Physics.Raycast(targetRay, out hit, 100, boundLayer);
+
+            Debug.DrawLine(transform.position, hit.point);
 
             if (Input.GetMouseButtonUp(0))
             {
