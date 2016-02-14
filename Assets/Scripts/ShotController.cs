@@ -128,7 +128,7 @@ public class ShotController : MonoBehaviour {
         sightLine.SetColors(startColor, endColor);
 
         sightLine.SetVertexCount(segmentCount);
-        for (int i = 0; i <= segmentCount; ++i)
+        for (int i = 0; i < segmentCount; ++i)
             sightLine.SetPosition(i, segments[i]);
 
     }
