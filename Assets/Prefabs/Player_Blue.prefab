@@ -100,9 +100,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fce50d6865e3c840ad8126a501a3ecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 164166, guid: 86147c99f084c7741ace972e5d8a3616, type: 2}
   mouseCollider: {fileID: 0}
-  shotSpeed: 10
+  shotSpeed: 100
+  distance: 0.3
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
