@@ -160,11 +160,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 40267105}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!120 &94089069 stripped
-LineRenderer:
-  m_PrefabParentObject: {fileID: 12007492, guid: c25af1d091b819c4499bbdabd3f00810,
-    type: 2}
-  m_PrefabInternal: {fileID: 1690502790}
 --- !u!1 &710462619
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,30 +606,6 @@ Prefab:
       propertyPath: mouseCollider
       value: 
       objectReference: {fileID: 1345768345}
-    - target: {fileID: 11468232, guid: c25af1d091b819c4499bbdabd3f00810, type: 2}
-      propertyPath: sightLine
-      value: 
-      objectReference: {fileID: 94089069}
-    - target: {fileID: 12007492, guid: c25af1d091b819c4499bbdabd3f00810, type: 2}
-      propertyPath: m_Parameters.startWidth
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 12007492, guid: c25af1d091b819c4499bbdabd3f00810, type: 2}
-      propertyPath: m_Parameters.endWidth
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11468232, guid: c25af1d091b819c4499bbdabd3f00810, type: 2}
-      propertyPath: segmentCount
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 12007492, guid: c25af1d091b819c4499bbdabd3f00810, type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 91e0193e07c008b499a7cb27d09a87cf, type: 2}
-    - target: {fileID: 12007492, guid: c25af1d091b819c4499bbdabd3f00810, type: 2}
-      propertyPath: m_UseLightProbes
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c25af1d091b819c4499bbdabd3f00810, type: 2}
   m_IsPrefabParent: 0
@@ -756,6 +727,10 @@ Prefab:
       propertyPath: mouseCollider
       value: 
       objectReference: {fileID: 1345768345}
+    - target: {fileID: 179248, guid: 973616614a4866e42bd9958336cd68d7, type: 2}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973616614a4866e42bd9958336cd68d7, type: 2}
   m_IsPrefabParent: 0

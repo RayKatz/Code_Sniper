@@ -101,7 +101,13 @@ public class ShotController : MonoBehaviour {
 
 
                 if (_hitObject.gameObject.layer == 10 || _hitObject.gameObject.layer == 11)
+                {
+                    ++i;
+                    for (; i < segmentCount; ++i)
+                        segments[i] = segments[i - 1];
                     break;
+                }
+                    
             }
             //if our raycast hit no objects, then set the next position to the last one plus v*t
             else
@@ -122,7 +128,7 @@ public class ShotController : MonoBehaviour {
         sightLine.SetColors(startColor, endColor);
 
         sightLine.SetVertexCount(segmentCount);
-        for (int i = 0; i < segmentCount; ++i)
+        for (int i = 0; i <= segmentCount; ++i)
             sightLine.SetPosition(i, segments[i]);
 
     }
