@@ -63,6 +63,8 @@ public class ShotController : MonoBehaviour {
                     Destroy(effect, 1f);
 
                     bullet.GetComponent<Rigidbody>().AddForce(dir * shotSpeed);
+
+                    lockedIn = false;
                 }
                 else
                 {
