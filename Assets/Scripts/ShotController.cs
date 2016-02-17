@@ -14,6 +14,8 @@ public class ShotController : MonoBehaviour {
 
     public bool lockedIn = false;
 
+    public GameObject shotParticles;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -57,6 +59,9 @@ public class ShotController : MonoBehaviour {
                     Vector3 dir = Vector3.Normalize(target - transform.position);
                     Vector3 origin = transform.position + (dir * distance);
                     GameObject bullet = (GameObject)Instantiate(bulletPrefab, origin, Quaternion.identity);
+                    GameObject effect = (GameObject)Instantiate(shotParticles, transform.position, Quaternion.LookRotation(dir));
+                    Destroy(effect, 1f);
+
                     bullet.GetComponent<Rigidbody>().AddForce(dir * shotSpeed);
                 }
                 else

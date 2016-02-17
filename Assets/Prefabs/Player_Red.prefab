@@ -169,9 +169,8 @@ MonoBehaviour:
   mouseCollider: {fileID: 0}
   shotSpeed: 100
   distance: 0.3
-  sightLine: {fileID: 12007492}
-  segmentCount: 50
-  segmentScale: 1
+  lockedIn: 0
+  shotParticles: {fileID: 198152, guid: 387501a330a8f9e4a8ae6b6313debaa7, type: 2}
 --- !u!120 &12007492
 LineRenderer:
   m_ObjectHideFlags: 1
