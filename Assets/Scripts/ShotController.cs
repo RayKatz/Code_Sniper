@@ -12,7 +12,7 @@ public class ShotController : MonoBehaviour {
     Vector3 target;
     Ray lastRay;
 
-    bool lockedIn = false;
+    public bool lockedIn = false;
 
 	// Use this for initialization
 	void Start ()
