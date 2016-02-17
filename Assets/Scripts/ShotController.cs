@@ -10,6 +10,9 @@ public class ShotController : MonoBehaviour {
     LayerMask boundLayer;
     public float distance = 1f;   //TODO: we have to bring the spawned close enough to look like it's shot from the player, but far enough to not hit himself
     Vector3 target;
+    Ray lastRay;
+
+    bool lockedIn = false;
 
 	// Use this for initialization
 	void Start ()
@@ -21,7 +24,18 @@ public class ShotController : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray ray;
+
+        if (!lockedIn)
+        {
+            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            lastRay = ray;
+        }
+        else
+        {
+            ray = lastRay;
+        }
+
         RaycastHit hit;
         if (Physics.Raycast(ray,out hit,100,hitLayer))
         {
@@ -38,14 +52,26 @@ public class ShotController : MonoBehaviour {
 
             if (Input.GetMouseButtonUp(0))
             {
-                Vector3 dir = Vector3.Normalize(target - transform.position);
-                Vector3 origin = transform.position + (dir*distance);
-                GameObject bullet = (GameObject) Instantiate(bulletPrefab, origin, Quaternion.identity);
-                bullet.GetComponent<Rigidbody>().AddForce(dir * shotSpeed);
+                if (lockedIn)
+                {
+                    Vector3 dir = Vector3.Normalize(target - transform.position);
+                    Vector3 origin = transform.position + (dir * distance);
+                    GameObject bullet = (GameObject)Instantiate(bulletPrefab, origin, Quaternion.identity);
+                    bullet.GetComponent<Rigidbody>().AddForce(dir * shotSpeed);
+                }
+                else
+                {
+                    lockedIn = true;
+                }
             }
+
+            if (Input.GetMouseButtonUp(1) && lockedIn)
+                lockedIn = false;
         }
 	}
 
+
+    /*
     //incoming magic...
 
     //Reference to the LineRenderer we will use to display the simulated path
@@ -131,5 +157,5 @@ public class ShotController : MonoBehaviour {
         for (int i = 0; i < segmentCount; ++i)
             sightLine.SetPosition(i, segments[i]);
 
-    }
+    }*/
 }
