@@ -5,11 +5,11 @@ public class MenuController : MonoBehaviour {
 
     public GameObject[] canvasi;
     public Animator fadeAnim;
-    int index;
+    int index = 0;
 
     void Start()
     {
-        ChangeScreen(0);
+        Switch();
     }
 
     public void ChangeScreen(int i)
