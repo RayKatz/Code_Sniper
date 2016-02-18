@@ -30,6 +30,10 @@ public class MenuController : MonoBehaviour {
         }
 
         canvasi[index].SetActive(true);
+        Animator[] anims = canvasi[index].GetComponentsInChildren<Animator>();
+        foreach (Animator a in anims)
+        {
+            a.enabled = true;
+        }
     }
-
 }
