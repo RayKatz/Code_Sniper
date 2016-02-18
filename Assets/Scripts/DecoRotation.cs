@@ -18,9 +18,9 @@ public class DecoRotation : MonoBehaviour {
 	void TurnIt ()
     {
         hash = new Hashtable();
-        hash.Add("x", Random.Range(0f, 1f));
-        hash.Add("y", Random.Range(0f, 1f));
-        hash.Add("z", Random.Range(0f, 1f));
+        hash.Add("x", Random.Range(-1f, 1f));
+        hash.Add("y", Random.Range(-1f, 1f));
+        hash.Add("z", Random.Range(-1f, 1f));
         hash.Add("time", intervall);
         hash.Add("easetype", iTween.EaseType.easeInOutCubic);
 
