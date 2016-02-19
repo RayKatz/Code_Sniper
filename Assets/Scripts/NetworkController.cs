@@ -13,19 +13,18 @@ public class NetworkController : MonoBehaviour {
     void Start()
     {
         Object.DontDestroyOnLoad(gameObject);
-        Application.runInBackground = true;
     }
 
     public void SetupServer()
     {
-        NetworkServer.Listen(port);
+        NetworkServer.Listen(GetComponent<NetworkManager>().networkPort);
     }
 
     public void SetupCLient()
     {
         lClient = new NetworkClient();
         lClient.RegisterHandler(MsgType.Connect, OnConnected);
-        lClient.Connect(ipText.text, port);
+        lClient.Connect(ipText.text, GetComponent<NetworkManager>().networkPort);
     }
 
     public void SetupLocalClient()
