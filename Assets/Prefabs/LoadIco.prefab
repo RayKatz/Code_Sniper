@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 423548}
   - 33: {fileID: 3385850}
   - 23: {fileID: 2302924}
+  - 114: {fileID: 11429352}
   m_Layer: 0
   m_Name: LoadIco
   m_TagString: Untagged
@@ -24,7 +25,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 101320}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -312, y: 0, z: 0}
+  m_LocalPosition: {x: -312, y: 0, z: 112}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -62,6 +63,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 101320}
   m_Mesh: {fileID: 4300000, guid: fc12fadfd7b5b8041ba1cb08e10456e2, type: 3}
+--- !u!114 &11429352
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 101320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 009fdc4881c99fa49b9e1ad478927236, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intervall: 3
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

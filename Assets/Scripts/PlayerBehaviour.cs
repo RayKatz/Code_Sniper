@@ -1,17 +1,22 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 using System.Collections;
 
-public class PlayerBehaviour : MonoBehaviour {
+public class PlayerBehaviour : NetworkBehaviour {
 
+    [SyncVar]
     public int health = 10;
 
     public void LoseHealth(int damage)
     {
-        health -= damage;
-        if (health <= 0)
+        if (isServer)
         {
-            health = 0;
-            Die();
+            health -= damage;
+            if (health <= 0)
+            {
+                health = 0;
+                Die();
+            }
         }
     }
 

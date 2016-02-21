@@ -13,7 +13,8 @@ GameObject:
   - 23: {fileID: 2344684}
   - 114: {fileID: 11432750}
   - 114: {fileID: 11447704}
-  m_Layer: 0
+  - 114: {fileID: 11401796}
+  m_Layer: 11
   m_Name: Player_Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,6 +78,38 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &11401796
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 151
+    i1: 54
+    i2: 22
+    i3: 97
+    i4: 74
+    i5: 72
+    i6: 102
+    i7: 228
+    i8: 43
+    i9: 217
+    i10: 149
+    i11: 131
+    i12: 54
+    i13: 205
+    i14: 104
+    i15: 215
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!114 &11432750
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -104,6 +137,8 @@ MonoBehaviour:
   mouseCollider: {fileID: 0}
   shotSpeed: 100
   distance: 0.3
+  lockedIn: 0
+  shotParticles: {fileID: 198152, guid: 387501a330a8f9e4a8ae6b6313debaa7, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

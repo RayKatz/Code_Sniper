@@ -13,6 +13,7 @@ GameObject:
   - 23: {fileID: 2320212}
   - 114: {fileID: 11463638}
   - 114: {fileID: 11468232}
+  - 114: {fileID: 11480276}
   m_Layer: 11
   m_Name: Player_Red
   m_TagString: Untagged
@@ -106,6 +107,38 @@ MonoBehaviour:
   distance: 0.3
   lockedIn: 0
   shotParticles: {fileID: 198152, guid: 387501a330a8f9e4a8ae6b6313debaa7, type: 2}
+--- !u!114 &11480276
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 194
+    i1: 90
+    i2: 241
+    i3: 208
+    i4: 145
+    i5: 184
+    i6: 25
+    i7: 196
+    i8: 73
+    i9: 155
+    i10: 189
+    i11: 171
+    i12: 211
+    i13: 240
+    i14: 8
+    i15: 16
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
