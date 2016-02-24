@@ -945,6 +945,10 @@ Prefab:
       propertyPath: mouseCollider
       value: 
       objectReference: {fileID: 1345768345}
+    - target: {fileID: 11480276, guid: c25af1d091b819c4499bbdabd3f00810, type: 2}
+      propertyPath: m_LocalPlayerAuthority
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c25af1d091b819c4499bbdabd3f00810, type: 2}
   m_IsPrefabParent: 0
@@ -1623,6 +1627,10 @@ Prefab:
       propertyPath: mouseCollider
       value: 
       objectReference: {fileID: 1345768345}
+    - target: {fileID: 11401796, guid: 973616614a4866e42bd9958336cd68d7, type: 2}
+      propertyPath: m_LocalPlayerAuthority
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 973616614a4866e42bd9958336cd68d7, type: 2}
   m_IsPrefabParent: 0

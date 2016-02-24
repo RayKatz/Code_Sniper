@@ -33,6 +33,7 @@ GameObject:
   - 54: {fileID: 5436028}
   - 114: {fileID: 11455164}
   - 114: {fileID: 11454856}
+  - 114: {fileID: 11473520}
   m_Layer: 10
   m_Name: Bullet
   m_TagString: Untagged
@@ -238,6 +239,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bounceThreshhold: 10
   explosion: {fileID: 109538, guid: 0bd12bfbea6c0b44d86f92bdb035839e, type: 2}
+--- !u!114 &11473520
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 164166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 3
+  m_SendInterval: 0.2
+  m_SyncRotationAxis: 0
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
 --- !u!114 &11484760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -349,6 +370,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: intervall
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_SendInterval
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

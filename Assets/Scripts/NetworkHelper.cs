@@ -7,7 +7,7 @@ public class NetworkHelper : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        NetworkServer.SpawnObjects();
+        //NetworkServer.SpawnObjects();
 	}
 	
 	// Update is called once per frame

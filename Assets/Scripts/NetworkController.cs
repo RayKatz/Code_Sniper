@@ -2,39 +2,28 @@
 using UnityEngine.Networking;
 using UnityEngine.UI;
 using System.Collections;
+using System;
 
-public class NetworkController : MonoBehaviour {
+public class NetworkController : NetworkManager {
 
-    public int port;
-    public Text ipText;
+    //public Text ipText;
 
-    NetworkClient lClient;
-
-    void Start()
-    {
-        Object.DontDestroyOnLoad(gameObject);
-    }
+    bool playerJoined = false;
 
     public void SetupServer()
     {
-        NetworkServer.Listen(GetComponent<NetworkManager>().networkPort);
+        StartHost();
+        ServerChangeScene("main");
     }
 
-    public void SetupCLient()
+    public void SetupClient()
     {
-        lClient = new NetworkClient();
-        lClient.RegisterHandler(MsgType.Connect, OnConnected);
-        lClient.Connect(ipText.text, GetComponent<NetworkManager>().networkPort);
+       StartClient();
     }
 
-    public void SetupLocalClient()
+    public override void OnClientSceneChanged(NetworkConnection conn)
     {
-        lClient = ClientScene.ConnectLocalServer();
-        lClient.RegisterHandler(MsgType.Connect, OnConnected);
-    }
-
-    public void OnConnected(NetworkMessage netMsg)
-    {
-        Debug.Log("Connected to Server");
+        base.OnClientSceneChanged(conn);
+        NetworkServer.SpawnObjects();
     }
 }

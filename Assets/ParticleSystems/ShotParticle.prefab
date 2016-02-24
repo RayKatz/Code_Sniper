@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 462076}
   - 198: {fileID: 19899864}
   - 199: {fileID: 19926262}
+  - 114: {fileID: 11455996}
   m_Layer: 0
   m_Name: ShotParticle
   m_TagString: Untagged
@@ -29,6 +30,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &11455996
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 198152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 56
+    i1: 117
+    i2: 1
+    i3: 163
+    i4: 48
+    i5: 168
+    i6: 249
+    i7: 228
+    i8: 168
+    i9: 174
+    i10: 107
+    i11: 99
+    i12: 19
+    i13: 222
+    i14: 186
+    i15: 167
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!198 &19899864
 ParticleSystem:
   m_ObjectHideFlags: 1

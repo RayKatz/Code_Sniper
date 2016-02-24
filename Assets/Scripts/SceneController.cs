@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
@@ -14,7 +15,7 @@ public class SceneController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void SwitchLevel (string level)
+	public void SwitchLevel (string level)
     {
         //TODO: animate fader
         GameObject.Find("Fade").GetComponent<Animator>().SetTrigger("Change");
